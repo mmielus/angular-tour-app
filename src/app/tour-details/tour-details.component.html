@@ -1,0 +1,52 @@
+<div class="container details" *ngIf="tour" style="margin-top: 50px;">
+  <mat-card>
+    <div class="mat-display-1">{{tour.name}}</div>
+    <mat-carousel hideArrow color="primary" proportion="40">
+      <mat-carousel-slide *ngFor="let image of images" image="{{image}}">
+      </mat-carousel-slide>
+    </mat-carousel>
+    <mat-card-content>
+      <p></p>
+      <app-rate style="margin-right: 15px;" [isRatingEnabled]="isRatingEnabled" [rating]="rating"
+                numberOfRates={{tour.rates.length}} (ratingUpdated)="ratingClicked($event)"></app-rate>
+      <button *ngIf="isRatingEnabled" [disabled]="selectedRate == null" (click)="rateClicked()" color="primary"
+              mat-raised-button>Oceń
+      </button>
+      <p></p>
+      <p>
+        {{tour.description}}
+      </p>
+      <mat-form-field>
+        <mat-label>Dostępne terminy</mat-label>
+        <mat-select [(ngModel)]="selectedTerm">
+          <mat-option *ngFor="let term of tour.terms" [value]="term">
+            {{term.startDate.seconds * 1000 | date: 'dd-MM-yyyy'}}- {{term.endDate.seconds * 1000 | date: 'dd-MM-yyyy'}} Cena: {{term.price | currency: 'PLN'}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div *ngIf="selectedTerm != null">
+        <p>Ilość dostępnych miejsc: {{ selectedTerm.numberOfLeftPlaces }}</p>
+      </div>
+      <div class="fields-container">
+        <mat-form-field>
+          <input matInput type="number" placeholder="Ilość miejsc" [(ngModel)]="numberOfTakenPlaces">
+        </mat-form-field>
+      </div>
+      <div *ngIf="selectedTerm != null && numberOfTakenPlaces > 0">
+        <p></p>
+        <h4>Całkowita kwota: {{ selectedTerm.price * numberOfTakenPlaces | currency: 'PLN' }}</h4>
+      </div>
+      <div *ngIf="user == null">
+        Tylko zalogowani uzytkownicy mogą rezerwować wycieczki. <a routerLink="/login">Zaloguj się</a>
+      </div>
+      <div *ngIf="user == null">
+        Jezeli nie posiadasz jeszcze konta <a routerLink="/register">zarejestruj się</a>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="bookClicked()">Zarezerwuj</button>
+    </mat-card-actions>
+  </mat-card>
+  <p></p>
+</div>
+

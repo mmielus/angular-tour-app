@@ -1,0 +1,72 @@
+.create-page {
+  padding: 20px 60px;
+}
+
+.title {
+  margin-left: 38%;
+  border-radius: 50px;
+  width: 300px;
+  text-align: center;
+  border: double #ffcd9c;
+}
+
+.field-color {
+  color: #ffcd9c;
+}
+
+::ng-deep .mat-form-field-placeholder {
+
+  color: black;
+}
+
+::ng-deep .mat-focused .mat-form-field-placeholder {
+
+  color: red;
+}
+
+.center {
+  margin-left: 44%;
+}
+
+.page-content {
+  background-color: #ff957c;
+  border-radius: 45px;
+  opacity: 0.8;
+}
+
+.img-avatar {
+  border-radius: 50%;
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+}
+
+.change-img-button {
+  display: block;
+  margin: 0px auto;
+}
+
+.create-form {
+  padding: 20px;
+}
+
+.submit-button-container {
+  justify-content: flex-end;
+}
+
+.submit-button {
+  width: 100%;
+}
+
+.input-style {
+  width: 100%;
+}
+
+.mat-error {
+  font-size: 12px;
+}
+
+.mat-input-element {
+  border: double;
+}
+

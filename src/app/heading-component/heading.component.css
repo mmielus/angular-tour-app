@@ -1,0 +1,18 @@
+.heading{
+  margin-left: 45%;
+  border-radius: 25px;
+  border: double #ffcd9c;
+  background-color: antiquewhite;
+  width: max-content;
+}
+.heading2{
+  margin-left: 40%;
+  border-radius: 25px;
+  border: double #ffcd9c;
+  background-color: antiquewhite;
+  width: max-content;
+}
+.image {
+  background-image: url("https://images.unsplash.com/photo-1523002010469-ea85cb48674b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-color: #cccccc;
+}

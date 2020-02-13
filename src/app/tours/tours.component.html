@@ -1,0 +1,47 @@
+<mat-grid-list cols="5" rowHeight="120px">
+  <mat-grid-tile>
+    <mat-form-field class="search">
+      <mat-label class="label">Szukaj</mat-label>
+      <input matInput placeholder="Nazwa" [(ngModel)]="query">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field class="month">
+      <mat-label class="label">Miesiąc</mat-label>
+      <mat-select style="color: black;" [(ngModel)]="selectedMonth">
+        <mat-option>Wszystkie</mat-option>
+        <mat-option *ngFor="let month of months" [value]="month">{{month}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field class="month">
+      <mat-label class="label">Miasto</mat-label>
+      <mat-select class="color-select-value" [(ngModel)]="selectedCountry">
+        <mat-option>Wszystkie</mat-option>
+        <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field>
+      <mat-label class="label">Min. cena</mat-label>
+      <input matInput type="number" placeholder="Min cena" [(ngModel)]="priceLowerBound">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field>
+      <mat-label class="label">Max. cena</mat-label>
+      <input matInput type="number" placeholder="Max cena" [(ngModel)]="priceHigherBound">
+    </mat-form-field>
+  </mat-grid-tile>
+</mat-grid-list>
+<p></p>
+
+<mat-grid-list class="list" cols="2">
+  <mat-grid-tile
+    *ngFor="let tour of tours | toursFilter : query:priceLowerBound:priceHigherBound:selectedMonth:selectedCountry"
+    class="container">
+    <app-tour [tour]="tour"></app-tour>
+  </mat-grid-tile>
+</mat-grid-list>

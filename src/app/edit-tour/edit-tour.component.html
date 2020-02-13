@@ -1,0 +1,83 @@
+<div class="container" style="margin-top: 30px;">
+  <h2>Edytuj wycieczkę</h2>
+  <form [formGroup]="modelForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Nazwa" formControlName="name" required>
+      <!--    <mat-error *ngIf="hasError('name', 'required')">To pole jest wymagane</mat-error>-->
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Cel podrózy" formControlName="destination" required>
+      <!--    <mat-error *ngIf="hasError('destination', 'required')">To pole jest wymagane</mat-error>-->
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea matInput placeholder="Opis" formControlName="description" required></textarea>
+      <!--    <mat-error *ngIf="hasError('description', 'required')">To pole jest wymagane</mat-error>-->
+    </mat-form-field>
+    <br>
+    <div formArrayName="images">
+      <div *ngFor="let image of images.controls; let i = index">
+        <mat-form-field>
+          <input matInput placeholder="URL zdjęcia" [formControlName]="i" required>
+        </mat-form-field>
+        <button mat-icon-button (click)="deleteImage(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+    <button mat-raised-button (click)="addImage()" type="button">Dodaj zdjęcie</button>
+    <br>
+    <p></p>
+    <div formArrayName="dates">
+      <div *ngFor="let date of dates.controls; let i = index" [formGroupName]="i">
+        <h4>Turnus {{i + 1}}</h4>
+        <mat-form-field style="margin-right: 20px;">
+          <input matInput [matDatepicker]="picker" placeholder="Początek turnusu" formControlName="startDate" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <!--        <mat-error *ngIf="hasTermError(i, 'startDate', 'required')">To pole jest wymagane</mat-error>-->
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker2" placeholder="Koniec turnusu" formControlName="endDate" required>
+          <!--        <mat-error *ngIf="hasTermError(i, 'endDate', 'required')">To pole jest wymagane</mat-error>-->
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="number" placeholder="Cena" formControlName="price" required>
+          <!--        <mat-error *ngIf="hasTermError(i, 'price', 'required')">To pole jest wymagane</mat-error>-->
+          <!--        <mat-error *ngIf="hasTermError(i, 'price', 'pattern')">To pole musi zawierać liczbę</mat-error>-->
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="number" placeholder="Ilość miejsc" formControlName="numberOfPlaces" required>
+          <!--        <mat-error *ngIf="hasTermError(i, 'numberOfPlaces', 'pattern')">To pole musi zawierać liczbę</mat-error>-->
+          <!--        <mat-error *ngIf="hasTermError(i, 'numberOfPlaces', 'required')">To pole jest wymagane</mat-error>-->
+        </mat-form-field>
+        <button mat-icon-button (click)="deleteTerm(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+    <button mat-raised-button (click)="addDates()" type="button">Dodaj turnus</button>
+    <br>
+    <p></p>
+
+    <div class="row submit-button-container">
+      <div class="col-md-4">
+        <button mat-raised-button class="submit-button" color="primary" type="submit">Save</button>
+      </div>
+      <div class="col-md-4">
+        <button mat-raised-button class="delete-button" color="warn" type="button" (click)="delete(tour)">Delete</button>
+      </div>
+      <div class="col-md-4">
+        <button mat-raised-button class="cancel-button" color="warn" type="button" (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<p></p>
+<p></p>

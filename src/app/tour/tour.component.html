@@ -1,0 +1,15 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{tour.name}}</mat-card-title>
+    <mat-card-subtitle>{{tour.destination}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{tour.images[0]}}" class="image" alt="tourImage">
+  <mat-card-content>
+    <h4>Ceny od: {{getLowestPrice() | currency: 'PLN' }}</h4>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" routerLink="/tourDetails/{{tour.id}}">Szczegóły</button>
+    <button *ngIf="isCurrentUserIsAdmin()" mat-raised-button color="primary" routerLink="/editTour/{{tour.id}}">Edytuj
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,20 @@
+.fields-container {
+  overflow: hidden;
+}
+
+::ng-deep .mat-select-value {
+  color: black;
+}
+
+
+::ng-deep .mat-select-arrow {
+  color: black;
+}
+
+.label {
+  color: black;
+}
+
+::ng-deep .mat-form-field-underline {
+  background: black;
+}

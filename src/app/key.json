@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tourscompany-6e91f",
+  "private_key_id": "6ea5855df0d4c718196d550a4f103740799be18a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyOzk+Lrr1zvrJ\nb9xpJR2k7BdbZwrQgZA68n0DgkabEzSX/AgadDSajIvtWTfw6jZ+4E/JNWtwwbPL\njY4npJzzHiC+b1gb4tBz0RrT92aQBDJW4MtSkg8xLk3BZ++P+nF68NVDQdwqBIew\n0Xu2pygFHtXGPYBAF9xjBpsacwhduF+N39dXlf+Bryd/cKEMJoYET3SNJFUrtTQf\nA93kfYVUDV7LvAeJ1EwqrK7cW2WLZNvo2lG+DeFZCfnNwzS65ghWOmJBmQuwqF5j\n7z5i0pxWuMkvtAqdQpQB1YSi2WamAg6mLWFahTkXwnn/nbdaYrtuxqdiIQwUxf3z\nAovYLDnRAgMBAAECggEACeDsVR7tEgQiDHWOsnV6H1auW/yh6eD/hfPkI9RV/mEF\n8Y1Yo+I4Wu9Sr2HqPsg1g2pig7cKNKSI1w26UQZPxG4hX5q/aALGHeA7d9+K280+\nvsfcfx/tN4Mu8DsG+TyG6wrzkBPzvHC2NmHDBRJ+XmvJSqDEpbDI4GR4pvJ0ppCS\nZi123ThUdL4ssIvf3M+rWDrsQ3fsLws1Cgrsetqc5Lx6hdSMXTqUXxu62BCHvP4H\nOrAgv63wQ2/sCc3MTHJ3gshIddltxJeb1EyS3Kb2Fl7Vf0L+iv2xXrsSwS6y6Z4d\nCWB1p0dCZWQCrCIHLwenkFMJJ9n6x/Frhsv5PscHAQKBgQDvh0f86xBlwqjLyPPi\nC3YVZvhcBmom7evogBWQBze4w5o4kI7hXy1IBtCyzM48vgycflTQHu54AToVnPmE\nkfpaUOcsvq6XD7kWcZbYqC/aGfB8BnteKPxbTxS6QoI78MntgCAl7YnvK+xK5PcD\n7Gotc18FBu86icfXa3DEO56k0QKBgQC+fNpV7dhU3ShJ1yO+4SYfvdd37F8bIakr\niV4oLOCvBfyL1x8p2xtCaPr79xHgF1tOfvcZwx9u4ld/dt2m7YV6q5M17Mdb6X5+\ndkZKki6G2wZAG34LcZxE9SnGRm0ayM9NlIFvr0C9TVMsXhHHvF6NqFd7vkdjWad2\ncEbvgV2FAQKBgQDAE9GshauOjrzhPfIkkGBO5VXAJfy13xDQTvX7m24ZofFn7rRF\nEhezrJNq7kVr/FMMo1nL0yIT5Zf4gPquToleJ4ZaIUbMKHWaA9idQLGuyiJIssH3\nThKf/hh3DKJ3Aq5K3/XntEZqHuTLYjSbVtgGPoAx/c+VN6ujmarCEbU0IQKBgCfI\n+/EmlCBlcJy7ioO7krLee7pYbCTGiwbE0h2iAeuMXIr4i1G6qZ7dPk6R8/HR7wge\nDI4c6tvF+nBs6y6KPW65ly2UHq9bvUe8fEHm9kDETjHljBXnzLO6YNdArlkByAp0\nEfS5rdPb6ptBqoUFGtqLZno5678cYpWiLa6oXlgBAoGBAOqXzdK8q/5B6mBQ8L6d\n8J/V+i/aTir2BcfMKOF6wLoNWnnSYrKxTdZ+3yENgHh7KK3cfj3bxhjV6TDhPr+D\n4Xkm3NAyjIf2sdtHdq0EYYR8jFOIiQjnBA1AV2KFvZUCUioS1LF0GCDP72BOyqNs\nxV28QYppoIczT0fA8q3ctKUL\n-----END PRIVATE KEY-----\n",
+  "client_email": "tourscompany-6e91f@appspot.gserviceaccount.com",
+  "client_id": "101652111837482411927",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tourscompany-6e91f%40appspot.gserviceaccount.com"
+}
